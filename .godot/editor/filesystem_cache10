@@ -1,3 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1764026794
-icon.svg::CompressedTexture2D::1418797335573542655::1764026788::1764026795::1::::<><><>0<>0<>8da3c23cd7a5e2061dedcde4f7333730<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://::1764039591
+icon.svg::CompressedTexture2D/CompressedTexture2D::1418797335573542655::1764026788::1764026795::1::::<><><>0<>0<>8da3c23cd7a5e2061dedcde4f7333730<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://escenas/::1764036166
+::res://escenas/nivel_1/::1764036140
+nivel_1.tscn::PackedScene/PackedScene::8390297501721576702::1764036140::0::1::::<><><>0<>0<><>::
+::res://escenas/prueba_fisicas/::1764036159
+prueba_fisicas.tscn::PackedScene/PackedScene::174581656584593120::1764036023::0::1::::<><><>0<>0<><>::uid://uhjnc4jr4iw2::::res://icon.svg
+::res://musica/::1764039591
+musica.wav::AudioStreamWAV::6086664848865898542::1764039511::1764039597::1::::<><><>0<>0<>6fa8446df91927a22693af5274de64c1<>res://.godot/imported/musica.wav-1272e54906429fa145d9d27195220d30.sample::
+::res://sonidos/::1764039591
+sonido_moneda.wav::AudioStreamWAV::6792469516706585032::1764039511::1764039597::1::::<><><>0<>0<>10dc93cd97a14418935c32a71d4a2c07<>res://.godot/imported/sonido_moneda.wav-eae974597beae20681741765866c8b71.sample::
+::res://sprites/::1764039591
+mago_spritesheet.png::CompressedTexture2D::7741442412082028401::1764039511::1764039597::1::::<><><>0<>0<>e124c89b8288e40232da1e4f2a12786b<>res://.godot/imported/mago_spritesheet.png-d763f4a6a07b61488452c0850218f8b4.ctex::
+tileset_mazmorra.png::CompressedTexture2D::2102438193168101304::1764039511::1764039597::1::::<><><>0<>0<>668612be9e4d91c4a5b53494cc57dd94<>res://.godot/imported/tileset_mazmorra.png-995e5bfa4cad9f0eb88f2627b42749f5.ctex::
