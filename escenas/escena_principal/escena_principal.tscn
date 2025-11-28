@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctyb1rvq0yd8y"]
+[gd_scene load_steps=3 format=3 uid="uid://ctyb1rvq0yd8y"]
 
 [ext_resource type="PackedScene" uid="uid://drsk8d7ybn2mc" path="res://escenas/nivel_1/nivel_1.tscn" id="1_pdctq"]
+[ext_resource type="Script" uid="uid://bvaealtwd8dks" path="res://escenas/escena_principal/escena_principal.gd" id="1_snxy5"]
 
 [node name="EscenaPrincipal" type="Node2D"]
+script = ExtResource("1_snxy5")
+niveles = Array[PackedScene]([ExtResource("1_pdctq")])
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 3)
 zoom = Vector2(2.41, 2.41)
-
-[node name="Nivel1" parent="." instance=ExtResource("1_pdctq")]

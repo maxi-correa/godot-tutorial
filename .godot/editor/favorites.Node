@@ -6,3 +6,4 @@ CollisionShape2D
 TileMapLayer
 CharacterBody2D
 AnimatedSprite2D
+Area2D

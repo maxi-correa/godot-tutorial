@@ -1,6 +1,9 @@
 res://escenas/nivel_1/nivel_1.tscn
 res://tile_sets/mazmorra.tres
-res://escenas/personaje/personaje.tscn
 res://escenas/personaje/sprite_frames_personaje.tres
+res://shaders/shader_rojo.tres
+res://escenas/personaje/material_personaje_rojo.tres
+res://escenas/personaje/personaje.tscn
 res://escenas/escena_principal/escena_principal.tscn
+res://escenas/escena_principal/escena_principal.gd
 res://escenas/personaje/personaje.gd

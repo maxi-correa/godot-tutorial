@@ -1,12 +1,24 @@
 extends CharacterBody2D
 
+signal personaje_muerto
+
 @export var animacion: AnimatedSprite2D
 #Estamos diciendo que solo acepta un nodo de este tipo
+@export var area_2d: Area2D
+@export var material_personaje_rojo: ShaderMaterial
 
 var _velocidad: float = 100.0
 var _velocidad_salto: float = -300.0
+var _muerto: bool #por defecto es false
+
+func _ready():
+	add_to_group("personajes")
+	area_2d.body_entered.connect(_on_area_2d_body_entered)
 
 func _physics_process(delta):
+	if _muerto:
+		return #Si está muerto, entonces se deja de ejecutar el resto del código
+	
 	#gravedad
 	velocity += get_gravity() * delta
 	
@@ -32,3 +44,12 @@ func _physics_process(delta):
 		animacion.play("correr")
 	else:
 		animacion.play("idle")
+
+
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	animacion.material = material_personaje_rojo
+	_muerto = true
+	animacion.stop() #si se estaba ejecutando alguna animación, se detiene
+	
+	await get_tree().create_timer(0.5).timeout
+	personaje_muerto.emit()
