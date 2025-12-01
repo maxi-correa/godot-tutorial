@@ -1,3 +1,4 @@
+Node
 Control
 GPUParticles2D
 Button
@@ -9,7 +10,5 @@ Label
 AudioStreamPlayer2D
 AnimationPlayer
 TileMapLayer
-Node
 CollisionShape2D
 Area2D
-Sprite2D

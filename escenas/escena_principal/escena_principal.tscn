@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctyb1rvq0yd8y"]
+[gd_scene load_steps=9 format=3 uid="uid://ctyb1rvq0yd8y"]
 
 [ext_resource type="PackedScene" uid="uid://drsk8d7ybn2mc" path="res://escenas/nivel_1/nivel_1.tscn" id="1_pdctq"]
 [ext_resource type="Script" uid="uid://bvaealtwd8dks" path="res://escenas/escena_principal/escena_principal.gd" id="1_snxy5"]
 [ext_resource type="PackedScene" uid="uid://catpqm7mii8k3" path="res://escenas/escena_final/escena_final.tscn" id="2_sbgap"]
 [ext_resource type="PackedScene" uid="uid://lgvoru8tsa5m" path="res://escenas/nivel_2/nivel_2.tscn" id="3_yoxmf"]
 [ext_resource type="AudioStream" uid="uid://csyoql15iygaw" path="res://musica/musica.wav" id="5_rrast"]
+[ext_resource type="PackedScene" uid="uid://cyjiclt6hrovk" path="res://escenas/controlador_partida/controlador_partida.tscn" id="6_px6n3"]
 [ext_resource type="PackedScene" uid="uid://2ywdgg36bg7p" path="res://escenas/contador_muertes/contador_muertes.tscn" id="6_y7kll"]
+[ext_resource type="Script" uid="uid://doj06os4gfjbc" path="res://escenas/escena_principal/controlador_pausa.gd" id="8_e307b"]
 
-[node name="EscenaPrincipal" type="Node2D"]
+[node name="EscenaPrincipal" type="Node2D" node_paths=PackedStringArray("controlador_partida")]
 script = ExtResource("1_snxy5")
 niveles = Array[PackedScene]([ExtResource("1_pdctq"), ExtResource("3_yoxmf"), ExtResource("2_sbgap")])
+controlador_partida = NodePath("ControladorPartida")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 3)
@@ -20,8 +23,14 @@ stream = ExtResource("5_rrast")
 autoplay = true
 bus = &"Musica"
 
+[node name="ControladorPartida" parent="." instance=ExtResource("6_px6n3")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ContadorMuertes" parent="CanvasLayer" instance=ExtResource("6_y7kll")]
 offset_top = 15.0
 offset_bottom = 15.0
+
+[node name="ControladorPausa" type="Node" parent="."]
+process_mode = 3
+script = ExtResource("8_e307b")
