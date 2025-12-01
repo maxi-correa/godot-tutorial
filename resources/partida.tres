@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DatosPartida" load_steps=2 format=3 uid="uid://cmrjifufcjj6j"]
+
+[ext_resource type="Script" uid="uid://b2iupp7u82uc8" path="res://scripts/datos_partida.gd" id="1_f2a5m"]
+
+[resource]
+script = ExtResource("1_f2a5m")
+nivel = 0
+muertes = 0
+metadata/_custom_type_script = "uid://b2iupp7u82uc8"

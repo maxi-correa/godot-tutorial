@@ -7,3 +7,7 @@ TileMapLayer
 CharacterBody2D
 AnimatedSprite2D
 Area2D
+AnimationPlayer
+AudioStreamPlayer2D
+Label
+CanvasLayer

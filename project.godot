@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="godot-tutorial"
-run/main_scene="uid://ctyb1rvq0yd8y"
+run/main_scene="uid://2m08p40xkrda"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ControladorGlobal="*res://scripts/controlador_global.gd"
 
 [input]
 

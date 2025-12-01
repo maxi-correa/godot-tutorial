@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://2m08p40xkrda"]
+
+[ext_resource type="Theme" uid="uid://dk050kwlnbj6f" path="res://temas/boton_menu_principal.tres" id="1_n806c"]
+[ext_resource type="StyleBox" uid="uid://c5ow4jravbwox" path="res://estilos_botones/focused.tres" id="2_g85l6"]
+[ext_resource type="StyleBox" uid="uid://dftte3d327ovo" path="res://estilos_botones/hover.tres" id="3_80s3h"]
+[ext_resource type="StyleBox" uid="uid://chy8jpkytdax8" path="res://estilos_botones/pressed.tres" id="4_h33ay"]
+[ext_resource type="StyleBox" uid="uid://mdhicihwioqg" path="res://estilos_botones/normal.tres" id="5_kbxwo"]
+[ext_resource type="Script" uid="uid://dcmmu1v354708" path="res://escenas/menu_principal/salir.gd" id="6_80s3h"]
+[ext_resource type="Script" uid="uid://hfqtjc41egjb" path="res://escenas/menu_principal/jugar.gd" id="6_h33ay"]
+[ext_resource type="PackedScene" uid="uid://ctyb1rvq0yd8y" path="res://escenas/escena_principal/escena_principal.tscn" id="7_kbxwo"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_g85l6"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 400, 1)
+spread = 0.0
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Jugar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_n806c")
+theme_override_styles/focus = ExtResource("2_g85l6")
+theme_override_styles/hover = ExtResource("3_80s3h")
+theme_override_styles/pressed = ExtResource("4_h33ay")
+theme_override_styles/normal = ExtResource("5_kbxwo")
+text = "Jugar"
+script = ExtResource("6_h33ay")
+escena_principal = ExtResource("7_kbxwo")
+
+[node name="Cargar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_n806c")
+theme_override_styles/focus = ExtResource("2_g85l6")
+theme_override_styles/hover = ExtResource("3_80s3h")
+theme_override_styles/pressed = ExtResource("4_h33ay")
+theme_override_styles/normal = ExtResource("5_kbxwo")
+text = "Cargar"
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_n806c")
+theme_override_styles/focus = ExtResource("2_g85l6")
+theme_override_styles/hover = ExtResource("3_80s3h")
+theme_override_styles/pressed = ExtResource("4_h33ay")
+theme_override_styles/normal = ExtResource("5_kbxwo")
+text = "Salir"
+script = ExtResource("6_80s3h")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Control"]
+amount = 500
+lifetime = 20.0
+preprocess = 20.0
+process_material = SubResource("ParticleProcessMaterial_g85l6")

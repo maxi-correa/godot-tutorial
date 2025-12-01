@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=4 uid="uid://drsk8d7ybn2mc"]
+[gd_scene load_steps=7 format=4 uid="uid://drsk8d7ybn2mc"]
 
 [ext_resource type="TileSet" uid="uid://b20q4rrkm2pmj" path="res://tile_sets/mazmorra.tres" id="1_ahhdk"]
 [ext_resource type="PackedScene" uid="uid://b22g5jq6yoshr" path="res://escenas/bordes/bordes.tscn" id="2_wpukg"]
+[ext_resource type="PackedScene" uid="uid://bit74wh7odwh" path="res://escenas/trampa/trampa.tscn" id="3_bfali"]
 [ext_resource type="PackedScene" uid="uid://bq2netkvf4s12" path="res://escenas/personaje/personaje.tscn" id="3_wpukg"]
+[ext_resource type="PackedScene" uid="uid://dutc2qvh5erdl" path="res://escenas/moneda/moneda.tscn" id="4_dn0x7"]
+[ext_resource type="PackedScene" uid="uid://cxhia4si2ux66" path="res://escenas/contenedor_monedas/contenedor_monedas.tscn" id="4_tifen"]
 
 [node name="Nivel1" type="Node2D"]
 
@@ -16,6 +19,20 @@ tile_map_data = PackedByteArray("AAAFAPn/AAACAAMAAAAFAPr/AAACAAMAAAAFAPv/AAACAAM
 tile_set = ExtResource("1_ahhdk")
 
 [node name="Bordes" parent="." instance=ExtResource("2_wpukg")]
+
+[node name="Trampa" parent="." instance=ExtResource("3_bfali")]
+position = Vector2(71, -104)
+
+[node name="ContenedorMonedas" parent="." instance=ExtResource("4_tifen")]
+
+[node name="Moneda" parent="ContenedorMonedas" instance=ExtResource("4_dn0x7")]
+position = Vector2(-191, -58)
+
+[node name="Moneda2" parent="ContenedorMonedas" instance=ExtResource("4_dn0x7")]
+position = Vector2(-102, -57)
+
+[node name="Moneda3" parent="ContenedorMonedas" instance=ExtResource("4_dn0x7")]
+position = Vector2(-15, -57)
 
 [node name="Personaje" parent="." instance=ExtResource("3_wpukg")]
 position = Vector2(48, -40)
